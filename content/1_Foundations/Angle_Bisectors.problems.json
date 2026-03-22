@@ -1,4 +1,31 @@
 {
   "MODULE_ID": "angle-bisectors",
-  "practice": []
+  "practice": [
+  {
+    "uniqueId": "2025-amc12a-16",
+    "name": "Problem 16 (2025 AMC 12A)",
+    "url": "https://artofproblemsolving.com/wiki/index.php?title=2025_AMC_12A_Problems/Problem_16",
+    "source": "AMC 12A",
+    "difficulty": "",
+    "isStarred": false,
+    "tags": [],
+    "statement" : "question statement will be added soon", 
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "2018-amc10a-24",
+    "name": "Problem 24 (2018 AMC 10A)",
+    "url": "https://artofproblemsolving.com/wiki/index.php?title=2018_AMC_10A_Problems/Problem_24",
+    "source": "AMC 10A",
+    "difficulty": "",
+    "isStarred": false,
+    "tags": [],
+    "statement" : "question statement will be added soon", 
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  }
+]
 }
