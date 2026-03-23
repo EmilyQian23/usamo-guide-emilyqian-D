@@ -163,7 +163,8 @@ const queries = [
             source: node.source,
             tags: node.tags || [],
             url: node.url,
-            difficulty: node.difficulty,
+            difficulty:
+              node.difficulty != null ? String(node.difficulty) : null,
             isStarred: node.isStarred,
             interaction: node.interaction,
             solutionReveal: node.solutionReveal,
@@ -183,10 +184,13 @@ const queries = [
     indexName: (process.env.GATSBY_ALGOLIA_INDEX_NAME ?? 'dev') + '_problems',
     settings: {
       attributesForFaceting: [
+        'searchable(difficulty)',
+        'searchable(source)',
         'filterOnly(difficulty)',
         'filterOnly(source)',
         'filterOnly(isStarred)',
         'filterOnly(problemModules.id)',
+        'filterOnly(problemModules.title)',
         'searchable(problemModules.title)',
         'searchable(tags)',
       ],

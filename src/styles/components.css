@@ -404,7 +404,7 @@
     position: absolute;
     top: -10%;
     left: -150%;
-    background: white;
+    background: rgba(255, 255, 255, 0.65);
     opacity: 0;
     transform: skewX(-20deg);
   }

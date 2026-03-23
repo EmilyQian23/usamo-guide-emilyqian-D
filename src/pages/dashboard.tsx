@@ -241,7 +241,7 @@ export default function DashboardPage(props: PageProps) {
       <SEO title="Dashboard" image={null} pathname={props.path} />
 
       <div
-        className="ui-page min-h-screen"
+        className="ui-page min-h-screen bg-gradient-to-b from-gray-50 via-orange-50 to-orange-100 px-0 text-gray-900 dark:bg-gradient-to-b dark:from-black dark:via-[#140f2f] dark:to-[#050514] dark:text-white"
         style={{
           '--ui-page-bg-image': 'url(/images/math-doodles.png)',
         } as React.CSSProperties}

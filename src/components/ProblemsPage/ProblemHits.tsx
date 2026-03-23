@@ -34,38 +34,56 @@ function ProblemHit({ hit }: ProblemHitProps) {
 
   const problem = hit as unknown as ProblemInfo;
   problem.uniqueId = hit.objectID;
+
+  const solutionLink =
+    hit.solution && hit.solution.kind === 'link' ? hit.solution : null;
+
+  const problemUrl = getProblemURL({
+    source: hit.source,
+    name: hit.name,
+    uniqueId: hit.objectID,
+  });
+
+  const navigateToProblem = () => {
+    navigate(problemUrl);
+  };
+
   return (
-    <div className="problem-card rounded-xl p-4 sm:p-6">
+    <div
+      onClick={navigateToProblem}
+      role="link"
+      tabIndex={0}
+      onKeyDown={e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          navigateToProblem();
+        }
+      }}
+      className="problem-card relative rounded-xl border border-white/20 bg-white/40 p-4 ring-1 ring-white/30 backdrop-blur-sm transition hover:-translate-y-0.5 hover:shadow-2xl hover:bg-white/50 dark:border-slate-700/80 dark:bg-slate-900/40 dark:ring-white/10 dark:hover:bg-slate-900/60"
+    >
       <div className="flex w-full flex-row justify-between">
         <span>
           <span className="text-sm font-medium text-blue-700 dark:text-blue-400">
             {hit.source}
           </span>
-          <p className="mt-1 mb-2 text-xl leading-6">
-            <Link
-              to={getProblemURL({
-                source: hit.source,
-                name: hit.name,
-                uniqueId: hit.objectID,
-              })}
-              className="hover:underline"
-            >
-              <Highlight hit={hit} attribute="name" />
-            </Link>
-            {hit.isStarred && (
-              <svg
-                className="ml-2 inline-block h-6 w-4 pb-1 text-blue-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            )}
+          <p className="mt-1 mb-2 text-xl leading-6 font-semibold text-slate-900 dark:text-white">
+            <Highlight hit={hit} attribute="name" />
           </p>
+          {hit.isStarred && (
+            <svg
+              className="ml-2 inline-block h-6 w-4 pb-1 text-blue-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          )}
         </span>
-        <ConfettiProvider>
-          <ProblemStatusCheckbox problem={problem} size="large" />
-        </ConfettiProvider>
+        <div onClick={e => e.stopPropagation()}>
+          <ConfettiProvider>
+            <ProblemStatusCheckbox problem={problem} size="large" />
+          </ConfettiProvider>
+        </div>
       </div>
       {/* <div>
         <a
@@ -86,9 +104,10 @@ function ProblemHit({ hit }: ProblemHitProps) {
         </a>
       </div> */}
 
-      {hit.solution && hit.solution.kind === 'link' && (
+      {solutionLink && (
         <a
-          href={hit.solution.url}
+          onClick={e => e.stopPropagation()}
+          href={solutionLink.url}
           target="_blank"
           rel="noreferrer"
           className="dark:text-dark-med-emphasis text-sm text-gray-500"
@@ -114,6 +133,7 @@ function ProblemHit({ hit }: ProblemHitProps) {
               <li key={moduleID}>
                 {section ? (
                   <Link
+                    onClick={e => e.stopPropagation()}
                     to={`/${section}/${moduleID}/#problem-${hit.objectID}`}
                     className="text-sm text-blue-600 dark:text-blue-400"
                   >

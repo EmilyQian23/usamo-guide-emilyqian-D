@@ -179,7 +179,7 @@ export default function IndexPage({ path }): JSX.Element {
               <GlowingRing>
                 <Link
                   to="/foundations"
-                  className={classNames(whiteButtonClassesBig, '!text-[15px] inline-block !font-bold')}
+                  className={classNames(whiteButtonClassesBig, '!text-[15px] inline-block !font-bold shine-effect')}
                 >
                   Browse Topics
                 </Link>

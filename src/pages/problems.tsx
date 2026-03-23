@@ -114,7 +114,7 @@ export default function ProblemsPage(props: PageProps<DataProps>) {
     <Layout>
       <SEO title="All Problems" image={null} pathname={props.path} />
 
-      <div className="problems-page ui-page min-h-screen">
+      <div className="problems-page ui-page min-h-screen bg-gray-50 dark:bg-gradient-to-b dark:from-black dark:via-[#140f2f] dark:to-[#050514] transition-colors duration-500">
         <TopNavigationBar />
 
         <InstantSearch
@@ -130,19 +130,23 @@ export default function ProblemsPage(props: PageProps<DataProps>) {
               <TagsRefinementList />
             </aside>
             <main className="col-span-12 sm:col-span-8 md:col-span-9 lg:col-span-10 xl:col-span-10">
-              <div className="bg-fuchsia-300 px-5 py-16 dark:bg-indigo-300">
-                <div className="mx-auto mb-6 max-w-3xl">
-                  <h1 className="dark:text-dark-high-emphasis mb-6 text-center text-3xl font-bold text-white sm:text-5xl">
+              <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-200 via-white to-orange-100 p-8 shadow-xl transition-all duration-500 dark:from-[#1f1c36] dark:via-[#120d2e] dark:to-[#070713] dark:shadow-[0_12px_40px_rgba(8,8,20,0.8)]">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(251,146,60,0.18),transparent_40%)]" />
+                <div className="relative mx-auto mb-6 max-w-3xl">
+                  <h1 className="dark:text-dark-high-emphasis mb-6 text-center text-3xl font-bold text-orange-900 sm:text-5xl dark:text-white">
                     Problems
                   </h1>
-                  <SearchBox />
+                  <div className="mx-auto max-w-md rounded-xl bg-white/60 p-3 dark:bg-slate-900/50">
+                    <SearchBox />
+                  </div>
                 </div>
               </div>
               <div className="mt-4 mb-1 flex justify-center">
                 <PoweredBy />
               </div>
               <div className="px-1 py-0.5">
-                <div className="mb-5 grid grid-cols-1 items-center gap-x-5 gap-y-3 sm:grid-cols-2 lg:grid-cols-6">
+                <div className="mb-5 rounded-2xl bg-white/80 p-4 shadow-lg dark:bg-slate-900/70">
+                  <div className="grid grid-cols-1 items-center gap-x-5 gap-y-3 sm:grid-cols-2 lg:grid-cols-6">
                   {selectionMetadata.map(props => (
                     <div
                       className="tw-forms-disable-all-descendants col-span-2 sm:col-span-3 md:col-span-1 lg:col-span-2"
@@ -152,12 +156,13 @@ export default function ProblemsPage(props: PageProps<DataProps>) {
                     </div>
                   ))}
                 </div>
-                <div className="mb-5 flex justify-center gap-3">
-                  <button
-                    onClick={() => sendShuffle(shuffle + 1)}
-                    className="inline-flex items-center rounded-md border border-blue-500 bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none dark:border-blue-400 dark:bg-blue-600 dark:text-white dark:hover:bg-blue-700"
-                    title={'Shuffle problems'}
-                  >
+                <div className="mb-5 border-t border-slate-200 pt-4 dark:border-slate-700">
+                  <div className="flex flex-wrap justify-center gap-3">
+                    <button
+                      onClick={() => sendShuffle(shuffle + 1)}
+                      className="inline-flex items-center rounded-full border border-orange-500 bg-gradient-to-r from-orange-500 to-orange-600 px-4 py-2 text-sm font-semibold text-white shadow-lg transition duration-200 hover:from-orange-400 hover:to-orange-500 focus:outline-none focus:ring-4 focus:ring-orange-300 dark:border-orange-300 dark:from-orange-500 dark:to-orange-600 dark:hover:from-orange-400 dark:hover:to-orange-500"
+                      title={'Shuffle problems'}
+                    >
                     <svg
                       className={'mr-2 h-5 w-5 text-gray-200'}
                       fill="none"
@@ -176,7 +181,7 @@ export default function ProblemsPage(props: PageProps<DataProps>) {
                   </button>
                   <button
                     onClick={() => sendRandom(random + 1)}
-                    className="inline-flex items-center rounded-md border border-blue-500 bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none dark:border-blue-400 dark:bg-blue-600 dark:text-white dark:hover:bg-blue-700"
+                    className="inline-flex items-center rounded-full border border-blue-500 bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-lg transition duration-200 hover:border-blue-400 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:border-blue-400 dark:bg-blue-600 dark:hover:bg-blue-700"
                     title={'Go to a random unsolved problem'}
                   >
                     <svg
@@ -196,8 +201,10 @@ export default function ProblemsPage(props: PageProps<DataProps>) {
                     Random
                   </button>
                 </div>
-                <ProblemHits shuffle={shuffle} random={random} />
-                <div className="mt-3 flex flex-wrap justify-center">
+                </div>
+              </div>
+              <ProblemHits shuffle={shuffle} random={random} />
+              <div className="mt-3 flex flex-wrap justify-center">
                   <Pagination showLast={true} className="pr-4" />
                   <HitsPerPage
                     items={[

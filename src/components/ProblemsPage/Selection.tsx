@@ -30,33 +30,49 @@ export default function Selection({
     ...props,
   });
   if (!items) items = refineItems;
-  for (const key in items) {
-    if (items[key].value instanceof Array) {
-      (items[key].value as string[]).push('null');
-    }
-  }
+
+  const normalizedItems = items.map(item => ({
+    ...item,
+    value: Array.isArray(item.value)
+      ? item.value.map(String)
+      : String(item.value),
+  }));
+
   const [refinements, setRefinements] = useState<string[]>([]);
   const { setIndexUiState } = useInstantSearch();
+
   useEffect(() => {
     setIndexUiState(prevIndexUiState => ({
+      ...prevIndexUiState,
       refinementList: {
         ...prevIndexUiState.refinementList,
         [attribute]: refinements,
       },
     }));
-  }, [refinements]);
+  }, [attribute, refinements, setIndexUiState]);
+
+  const handleChange = (selected: any) => {
+    if (isMulti) {
+      const values = (selected || [])
+        .flatMap(item =>
+          Array.isArray(item.value) ? item.value.map(String) : [String(item.value)]
+        )
+        .filter(Boolean);
+      setRefinements(values);
+    } else if (selected) {
+      setRefinements([String(selected.value)]);
+    } else {
+      setRefinements([]);
+    }
+  };
   return (
     <Select
-      onChange={(items: any) => {
-        if (isMulti) setRefinements(items.map(item => item.value).flat());
-        else if (items) setRefinements([items.value]);
-        else setRefinements([]);
-      }}
+      onChange={handleChange}
       isClearable
       placeholder={placeholder}
       isMulti={isMulti}
       isSearchable={searchable}
-      options={items.map(item => ({
+      options={normalizedItems.map(item => ({
         ...item,
         label: transform ? transform(item.label) : item.label,
       }))}

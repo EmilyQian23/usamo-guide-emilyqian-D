@@ -1,4 +1,44 @@
 {
   "MODULE_ID": "amgm-inequality",
-  "practice": []
+  "practice": [
+    {
+      "uniqueId": "2023-amc12a-23",
+      "name": "Problem 23 (2023 AMC 12A)",
+      "url": "https://artofproblemsolving.com/wiki/index.php/2023_AMC_12A_Problems/Problem_23",
+      "source": "AMC 12A",
+      "difficulty": "",
+      "isStarred": false,
+      "tags": [],
+      "statement": "How many ordered pairs of positive real numbers $(a,b)$ satisfy the equation $(1+2a)(2+2b)(2a+b) = 32ab$?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "2016-amc12b-14",
+      "name": "Problem 14 (2016 AMC 12B)",
+      "url": "https://artofproblemsolving.com/wiki/index.php?title=2016_AMC_12B_Problems/Problem_14",
+      "source": "AMC 12B",
+      "difficulty": "",
+      "isStarred": false,
+      "tags": [],
+      "statement": "The sum of an infinite geometric series is a positive number $S$, and the second term in the series is $1$. What is the smallest possible value of $S$?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "1965-ahsme-34",
+      "name": "Problem 34 (1965 AHSME)",
+      "url": "https://artofproblemsolving.com/wiki/index.php?title=1965_AHSME_Problems/Problem_34",
+      "source": "AHSME",
+      "difficulty": "",
+      "isStarred": false,
+      "tags": [],
+      "statement": "For $x \\ge 0$, the smallest value of $\\frac{4x^2 + 8x + 13}{6(1 + x)}$ is:",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    }
+  ]
 }

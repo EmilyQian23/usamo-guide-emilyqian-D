@@ -1,4 +1,44 @@
 {
   "MODULE_ID": "systems-equations",
-  "practice": []
+   "practice": [
+     {
+      "uniqueId": "2026-amc8-19",
+      "name": "Problem 19 (2026 AMC 8)",
+      "url": "https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_19",
+      "source": "AMC 8",
+      "difficulty": "Easy",
+      "isStarred": true,
+      "tags": [],
+      "statement": "Miguel is walking with his dog, Luna. When they reach the entrance to a park, Miguel throws a ball straight ahead and continues to walk at a steady pace. Luna sprints toward the ball, which stops by a tree. As soon as the dog reaches the ball, she brings it back to Miguel. Luna runs 5 times faster than Miguel walks. What fraction of the distance between the entrance and the tree does Miguel cover by the time Luna brings him the ball? (Check AoPS for Image)",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "2026-amc8-14",
+      "name": "Problem 14 (2026 AMC 8)",
+      "url": "https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_14",
+      "source": "AMC 8",
+      "difficulty": "Easy",
+      "isStarred": false,
+      "tags": [],
+      "statement": "Jami picked three equally spaced integer numbers on the number line. The sum of the first and the second numbers is 40, while the sum of the second and third numbers is 60. What is the sum of all three numbers?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "1970-ahsme-26",
+      "name": "Problem 26 (1970 AHSME)",
+      "url": "https://artofproblemsolving.com/wiki/index.php?title=1970_AHSME_Problems/Problem_26",
+      "source": "AHSME",
+      "difficulty": "Easy",
+      "isStarred": false,
+      "tags": [],
+      "statement": "The number of distinct points in the $xy$-plane common to the graphs of $(x+y-5)(2x-3y+5)=0$ and $(x-y+1)(3x+2y-12)=0$ is",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    }
+  ]
 }

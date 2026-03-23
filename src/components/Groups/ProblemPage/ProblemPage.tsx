@@ -48,94 +48,39 @@ export default function ProblemPage(props) {
         pathname={props.path}
       />
       <TopNavigationBar />
-      <nav className="mt-6 mb-4 flex" aria-label="Breadcrumb">
-        <Breadcrumbs
-          className="mx-auto w-full max-w-(--breakpoint-xl) px-4 pt-3 pb-4 sm:px-6 lg:px-8"
-          group={activeGroup.groupData!}
-          post={post}
-        />
-      </nav>
+      <div className="relative overflow-hidden bg-gradient-to-b from-white via-orange-50 to-orange-100 dark:from-black dark:via-[#1a0d00] dark:to-[#0b0a12] transition-colors duration-500">
+        <div className="pointer-events-none absolute inset-0 bg-repeat bg-center opacity-20" style={{ backgroundImage: "url('/images/starbg.png')" }} />
+        <nav className="relative z-10 mt-6 mb-4 flex" aria-label="Breadcrumb">
+          <Breadcrumbs
+            className="mx-auto w-full max-w-(--breakpoint-xl) px-4 pt-3 pb-4 sm:px-6 lg:px-8"
+            group={activeGroup.groupData!}
+            post={post}
+          />
+        </nav>
+      </div>
       <main
-        className="relative flex-1 overflow-y-auto focus:outline-hidden"
+        className="relative flex-1 overflow-y-auto focus:outline-hidden bg-transparent"
         tabIndex={-1}
       >
         <div className="pb-8 xl:pb-10">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 xl:grid xl:max-w-(--breakpoint-xl) xl:grid-cols-3">
-            <div className="xl:col-span-2 xl:border-r xl:border-gray-200 xl:pr-8 dark:border-gray-700">
-              <div className="md:flex md:items-center md:justify-between md:space-x-4 xl:border-b xl:pb-6 dark:border-gray-700">
-                <div>
-                  <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                    Problem: {problem.name}
-                  </h1>
-                  <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                    {post.name}
-                  </p>
-                </div>
-                {activeGroup.showAdminView && (
-                  <div className="mt-4 flex space-x-3 md:mt-0">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        if (
-                          confirm(
-                            'Are you sure you want to delete this problem?'
-                          )
-                        ) {
-                          deleteProblem(post, problem.id)
-                            .then(() => {
-                              if (!activeGroup.groupData!) {
-                                throw new Error('No group data');
-                              }
-                              navigate(
-                                `/groups/${activeGroup.groupData!.id}/post/${
-                                  post.id
-                                }`,
-                                {
-                                  replace: true,
-                                }
-                              );
-                            })
-                            .catch(e => toast.error(e.message));
-                        }
-                      }}
-                      className="btn"
-                    >
-                      <svg
-                        className="mr-2 -ml-1 h-5 w-5 text-gray-400"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                        />
-                      </svg>
-                      <span>Delete</span>
-                    </button>
-                    <Link to="edit" className="btn">
-                      <svg
-                        className="mr-2 -ml-1 h-5 w-5 text-gray-400"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-                      </svg>
-                      <span>Edit</span>
-                    </Link>
+            <div className="xl:col-span-2 xl:pr-8">
+              <div className="rounded-2xl border border-orange-200 bg-white/90 p-6 shadow-xl dark:border-gray-700 dark:bg-slate-900/75">
+                <div className="md:flex md:items-center md:justify-between md:space-x-4 xl:border-b xl:pb-6 dark:border-gray-700">
+                  <div>
+                    <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight">
+                      Problem: {problem.name}
+                    </h1>
+                    <p className="mt-2 text-base text-orange-700 dark:text-orange-300 font-medium">
+                      {post.name}
+                    </p>
                   </div>
-                )}
-              </div>
-              <aside className="mt-8 xl:hidden">
-                <ProblemSidebar post={post} problem={problem} />
-              </aside>
-              <div className="py-6 xl:pt-8 xl:pb-12">
-                <SafeMarkdownRenderer>{problem.body}</SafeMarkdownRenderer>
+                </div>
+                <aside className="mt-8 xl:hidden">
+                  <ProblemSidebar post={post} problem={problem} />
+                </aside>
+                <div className="py-6 xl:pt-8 xl:pb-12">
+                  <SafeMarkdownRenderer>{problem.body}</SafeMarkdownRenderer>
 
                 {problem.hints.length > 0 && (
                   <>
@@ -209,6 +154,7 @@ export default function ProblemPage(props) {
               <ProblemSidebar post={post} problem={problem} />
             </aside>
           </div>
+        </div>
         </div>
       </main>
     </Layout>
