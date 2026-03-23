@@ -1,4 +1,42 @@
 {
   "MODULE_ID": "angle-bisectors",
-  "practice": []
+  "practice": [{
+  "uniqueId": "amc12-2025a-16",
+  "name": "Problem 16 (2025 AMC 12A)",
+  "url": "https://artofproblemsolving.com/wiki/index.php/2025_AMC_12A_Problems/Problem_16",
+  "source": "AMC 12",
+  "difficulty": "Easy",
+  "isStarred": false,
+  "tags": [],
+  "statement": "In $\\triangle ABC$, $AB = 13$, $BC = 14$, and $AC = 15$. Let $I$ be the incenter of $\\triangle ABC$, and let $D$, $E$, and $F$ be the points where the angle bisectors of $\\angle A$, $\\angle B$, and $\\angle C$, respectively, intersect the opposite sides. What is the area of $\\triangle DEF$?",
+  "solutionMetadata": {
+    "kind": "none"
+  }
+},
+{
+  "uniqueId": "amc12-2021fa-13",
+  "name": "Problem 13 (2021 Fall AMC 12A)",
+  "url": "https://artofproblemsolving.com/wiki/index.php/2021_Fall_AMC_12A_Problems/Problem_13",
+  "source": "AMC 12",
+  "difficulty": "Easy",
+  "isStarred": false,
+  "tags": [],
+  "statement": "In $\\triangle ABC$ with $AB=25$, $AC=29$, and $BC=6$, the angle bisector of $\\angle BAC$ intersects $BC$ at $D$. A circle is inscribed in $\\triangle ABD$ and is tangent to $AB$ at $M$ and to $AD$ at $N$. What is $MN$?",
+  "solutionMetadata": {
+    "kind": "none"
+  }
+},
+{
+  "uniqueId": "amc12-2018a-23",
+  "name": "Problem 23 (2018 AMC 12A)",
+  "url": "https://artofproblemsolving.com/wiki/index.php/2018_AMC_12A_Problems/Problem_23",
+  "source": "AMC 12",
+  "difficulty": "Easy",
+  "isStarred": false,
+  "tags": [],
+  "statement": "In $\\triangle ABC$, $AB=6$, $BC=7$, and $CA=8$. Point $D$ lies on $\\overline{BC}$, and $\\overline{AD}$ bisects $\\angle BAC$. Point $E$ lies on $\\overline{AC}$, and $\\overline{BE}$ bisects $\\angle ABC$. The bisectors $\\overline{AD}$ and $\\overline{BE}$ intersect at $I$. What is the ratio $AI : ID$?",
+  "solutionMetadata": {
+    "kind": "none"
+  }
+}]
 }
