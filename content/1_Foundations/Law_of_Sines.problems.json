@@ -1,4 +1,59 @@
 {
   "MODULE_ID": "law-of-sines",
-  "practice": []
+  "practice": [
+  {
+    "uniqueId": "aime-2001-i-4",
+    "name": "Problem 4 (2001 AIME I)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2001_AIME_I_Problems/Problem_4",
+    "source": "AIME I",
+    "difficulty": "Medium",
+    "isStarred": false,
+    "tags": [
+      "Geometry",
+      "Triangle",
+      "Law of Sines",
+      "Angle Bisector"
+    ],
+    "statement": "In triangle ABC, angles A and B measure 60° and 80°, respectively. The bisector of angle C intersects AB at D, and AD = 1. The area of triangle ABC can be written in the form (a√b)/c, where a, b, and c are positive integers, and b is not divisible by the square of any prime. Find a + b + c.",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "amc12a-2019-19",
+    "name": "Problem 19 (2019 AMC 12A)",
+    "url": "https://artofproblemsolving.com/wiki/index.php?title=2019_AMC_12A_Problems/Problem_19",
+    "source": "AMC 12A",
+    "difficulty": "Hard",
+    "isStarred": false,
+    "tags": [
+      "Geometry",
+      "Triangle",
+      "Law of Sines",
+      "Law of Cosines"
+    ],
+    "statement": "In triangle ABC with integer side lengths, cos A = 7/9. What is the least possible perimeter for ABC?",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "aime-2018-i-13",
+    "name": "Problem 13 (2018 AIME I)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2018_AIME_I_Problems/Problem_13",
+    "source": "AIME I",
+    "difficulty": "Hard",
+    "isStarred": false,
+    "tags": [
+      "Geometry",
+      "Triangle",
+      "Law of Sines",
+      "Incenter"
+    ],
+    "statement": "Let triangle ABC have side lengths AB = 13, BC = 14, and CA = 15. Point P lies in the interior of triangle ABC, and points D and E are the incenters of triangle ABP and triangle ACP, respectively. Find the minimum possible area of triangle ADE as P varies along BC.",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  }
+]
 }
