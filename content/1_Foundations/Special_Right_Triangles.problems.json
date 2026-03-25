@@ -1,4 +1,59 @@
 {
   "MODULE_ID": "special-right-triangles",
-  "practice": []
+  "practice": [
+  {
+    "uniqueId": "amc8-2017-22",
+    "name": "Problem 22 (2017 AMC 8)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2017_AMC_8_Problems/Problem_22",
+    "source": "AMC 8",
+    "difficulty": "Hard",
+    "isStarred": false,
+    "tags": [
+      "Geometry",
+      "Special Right Triangle",
+      "Right Triangle",
+      "Semicircle"
+    ],
+    "statement": "In the right triangle, AB = 6, BC = 8, and angle B = 90°. A semicircle is inscribed in the triangle as shown. What is the radius of the semicircle?",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "amc12b-2025-10",
+    "name": "Problem 10 (2025 AMC 12B)",
+    "url": "https://artofproblemsolving.com/wiki/index.php?title=2025_AMC_12B_Problems/Problem_10",
+    "source": "AMC 12B",
+    "difficulty": "Medium",
+    "isStarred": false,
+    "tags": [
+      "Geometry",
+      "Special Right Triangle",
+      "Right Triangle",
+      "Altitude",
+      "Hypotenuse"
+    ],
+    "statement": "The altitude to the hypotenuse of a right triangle is divided into two segments of lengths a and b by the median to the shortest side of the triangle. What is the ratio a:b?",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  },
+  {
+    "uniqueId": "amc10a-2014-22",
+    "name": "Problem 22 (2014 AMC 10A)",
+    "url": "https://artofproblemsolving.com/wiki/index.php/2014_AMC_10A_Problems/Problem_22",
+    "source": "AMC 10A",
+    "difficulty": "Hard",
+    "isStarred": false,
+    "tags": [
+      "Geometry",
+      "Special Right Triangle",
+      "Right Triangle"
+    ],
+    "statement": "Problem statement available at the Art of Problem Solving wiki.",
+    "solutionMetadata": {
+      "kind": "none"
+    }
+  }
+]
 }
