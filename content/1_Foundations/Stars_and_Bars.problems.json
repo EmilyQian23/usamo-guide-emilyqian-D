@@ -25,7 +25,7 @@
     "difficulty": "Unknown",
     "isStarred": false,
     "tags": [],
-    "statement": "Problem not yet released. The 2026 AMC 8 has not been held.",
+    "statement": "The land of Catania uses gold coins and silver coins. Gold coins are $1$ mm thick and silver coins are $3$ mm thick. In how many ways can Taylor make a stack of coins that is $8$ mm tall using any arrangement of gold and silver coins, assuming order matters?",
     "solutionMetadata": {
       "kind": "none"
     }
