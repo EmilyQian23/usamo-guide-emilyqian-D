@@ -44,8 +44,9 @@ const EditorTabBar: React.FC<EditorTabBarProps> = ({
   const filePath = useAtomValue(trueFilePathAtom);
   const file = useAtomValue(trueFileAtom);
   const saveFile = useSetAtom(saveFileAtom);
-  const tab = useAtomValue(tabAtom);
+  const tab = useAtomValue(tabAtom); // <-- use this instead of calling useAtomValue in JSX
   const [dialogOpen, setDialogOpen] = useState(false);
+
   const ensureBranchExists = useCallback(async () => {
     if (!octokit || !githubInfo || !branch) return;
     try {
@@ -111,6 +112,7 @@ const EditorTabBar: React.FC<EditorTabBarProps> = ({
       },
     });
   }, [octokit, githubInfo, branch]);
+
   const updateFile = useCallback(
     async file => {
       if (!octokit || !githubInfo || !branch) return;
@@ -153,6 +155,7 @@ const EditorTabBar: React.FC<EditorTabBarProps> = ({
     },
     [octokit, githubInfo, branch, filePath, ensureBranchExists]
   );
+
   const pullCode = useCallback(async () => {
     if (!octokit || !githubInfo || !branch) return;
     setPullState('Pulling...');
@@ -186,6 +189,7 @@ const EditorTabBar: React.FC<EditorTabBarProps> = ({
     });
     setPullState('Pull Code');
   }, [octokit, githubInfo, branch, filePath, tab, saveFile]);
+
   return (
     <>
       <div className="flex bg-gray-50 dark:bg-gray-950">
@@ -230,7 +234,7 @@ const EditorTabBar: React.FC<EditorTabBarProps> = ({
         >
           Format Code
         </button>
-        {useAtomValue(tabAtom) === 'problems' && (
+        {tab === 'problems' && (
           <button
             className={classNames(
               'hover:bg-gray-200 hover:text-gray-800 active:bg-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-300 dark:active:bg-gray-800',
