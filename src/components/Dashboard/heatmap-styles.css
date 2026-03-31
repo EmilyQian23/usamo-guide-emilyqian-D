@@ -28,12 +28,12 @@
 }
 
 .react-calendar-heatmap rect {
-  stroke: rgba(15, 23, 42, 0.08);
-  stroke-width: 0.45;
+  stroke: none;
 }
 
 .react-calendar-heatmap rect:hover {
-  stroke: rgba(15, 23, 42, 0.35);
+  stroke: rgba(15, 23, 42, 0.55);
+  stroke-width: 1.5;
   filter: none;
 }
 
@@ -66,11 +66,11 @@
 }
 
 .dark .react-calendar-heatmap rect {
-  stroke: rgba(146, 137, 127, 0.308);
-  stroke-width: 0.45;
+  stroke: none;
 }
 
 .dark .react-calendar-heatmap rect:hover {
-  stroke: rgba(148, 163, 184, 0.6);
+  stroke: rgba(253, 186, 116, 0.8);
+  stroke-width: 1.5;
   filter: none;
 }
