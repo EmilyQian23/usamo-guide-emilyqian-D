@@ -1,4 +1,44 @@
 {
-"MODULE_ID": "chicken-mcnugget",
-"practice": []
+  "MODULE_ID": "chicken-mcnugget",
+  "practice": [
+    {
+      "uniqueId": "amc10b-2015-15",
+      "name": "Problem 15 (2015 AMC 10B)",
+      "url": "https://artofproblemsolving.com/wiki/index.php/2015_AMC_10B_Problems/Problem_15",
+      "source": "AMC 10B",
+      "difficulty": "Hard",
+      "isStarred": false,
+      "tags": ["Chicken Mcnugget"],
+      "statement": "The town of Hamlet has $3$ people for each horse, $4$ sheep for each cow, and $3$ ducks for each person. Which of the following could not possibly be the total number of people, horses, sheep, cows, and ducks in Hamlet?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "aime2-2019-14",
+      "name": "Problem 14 (2019 AIME II)",
+      "url": "https://artofproblemsolving.com/wiki/index.php/2019_AIME_II_Problems/Problem_14",
+      "source": "AIME II",
+      "difficulty": "Hard",
+      "isStarred": false,
+      "tags": ["Chicken Mcnugget"],
+      "statement": "Find the sum of all positive integers $n$ such that, given an unlimited supply of stamps of denominations $5,n,$ and $n+1$ cents, $91$ cents is the greatest postage that cannot be formed.",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    },
+    {
+      "uniqueId": "aime-1994-11",
+      "name": "Problem 11 (1994 AIME)",
+      "url": "https://artofproblemsolving.com/wiki/index.php/1994_AIME_Problems/Problem_11",
+      "source": "AIME",
+      "difficulty": "Hard",
+      "isStarred": false,
+      "tags": ["Chicken Mcnugget"],
+      "statement": "Ninety-four bricks, each measuring $4''\\times 10''\\times 19''$, are to be stacked one on top of another to form a tower 94 bricks tall. Each brick can be oriented so it contributes $4''\\,$ or $10''\\,$ or $19''\\,$ to the total height of the tower. How many different tower heights can be achieved using all of the ninety-four bricks?",
+      "solutionMetadata": {
+        "kind": "none"
+      }
+    }
+  ]
 }
